@@ -13,6 +13,9 @@ return new class extends Migration
     {
         Schema::create('tareas_tabla', function (Blueprint $table) {
             $table->id();
+            $table->stribg('Titulo');
+            $table->timestamp('fecha_limite')->nullable();
+            $table->string('estado');
             $table->timestamps();
         });
     }

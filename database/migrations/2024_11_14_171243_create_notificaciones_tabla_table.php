@@ -13,7 +13,16 @@ return new class extends Migration
     {
         Schema::create('notificaciones_tabla', function (Blueprint $table) {
             $table->id();
+            $table->text('mensaje');
+            $table->timestamp('fecha_envio');
+            $table->string('estado_envio');
+            $table->string('metodo_envio');
+            $table->string('tipo_notificacion');
+            $table->boolean('repetir')->default(false);
+            $table->string('repetir_intervalo')->nullable();
+            $table->timestamp('fecha_enviodo')->nullable();
             $table->timestamps();
+            
         });
     }
 

@@ -13,7 +13,13 @@ return new class extends Migration
     {
         Schema::create('calendario_tabla', function (Blueprint $table) {
             $table->id();
+            $table->string('mes_año');
+            $table->timestamp('fecha_inicio');
+            $table->timestamp('fecha_fin');
+            $table->string('tipo_calendario');
+            $table->text('Descripcion')->nullable();
             $table->timestamps();
+            
         });
     }
 
